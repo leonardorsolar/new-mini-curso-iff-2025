@@ -6,19 +6,32 @@ https://www.youtube.com/watch?v=FZpUw1p370o
 
 Cursor (SQLite + Playwright).
 
+Aula: Subir o front e o backend
+1-abrir o cursor
+2-install extensão: live server + sqlite viewer
+3-Abrir o front: index.html
+4-O backend: - npm i - npm start
+MCP:
+5-install: npm install -g @executeautomation/database-server @executeautomation/playwright-mcp-server
+6.Adicione o código do mcp no cursor (item 2)
+7- Digite "Cursor IDE" na barra de busca do Google
+8- Abra http://localhost:3001/ e tire um screenshot
+9- registro o name Pedro no formulario http://127.0.0.1:5500/sqlite-mcp/index.html
+10-Mostre todos os registros da tabela users
+
 ---
 
 # 🛠️ Tutorial Rápido – MCP no Cursor
 
 ## 1. Pré-requisitos
 
--   Cursor IDE atualizado
--   Node.js e npm instalados
--   Pacotes MCP:
+- Cursor IDE atualizado
+- Node.js e npm instalados
+- Pacotes MCP:
 
-    ```bash
-    npm install -g @executeautomation/database-server @executeautomation/playwright-mcp-server
-    ```
+  ```bash
+  npm install -g @executeautomation/playwright-mcp-server
+  ```
 
 ---
 
@@ -28,20 +41,31 @@ Abra **Settings → MCP & Integrations** e adicione:
 
 ```json
 {
-    "mcpServers": {
-        "sqlite": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@executeautomation/database-server",
-                "/home/seu_usuario/Databases/meu_banco.db"
-            ]
-        },
-        "playwright": {
-            "command": "npx",
-            "args": ["-y", "@executeautomation/playwright-mcp-server"]
-        }
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"]
     }
+  }
+}
+```
+
+```bash
+ npm install -g @executeautomation/database-server
+```
+
+```json
+{
+  "mcpServers": {
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/database-server", "/home/seu_usuario/Databases/meu_banco.db"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"]
+    }
+  }
 }
 ```
 
@@ -53,8 +77,8 @@ comando: linux: pdw
 
 ## 3. Reinicie o Cursor
 
--   Feche e abra o Cursor IDE.
--   No chat, você verá as ferramentas **sqlite** e **playwright** ativas.
+- Feche e abra o Cursor IDE.
+- No chat, você verá as ferramentas **sqlite** e **playwright** ativas.
 
 ---
 
@@ -101,9 +125,9 @@ Digite "Cursor IDE" na barra de busca do Google
 
 ## 6. Dicas
 
--   Use **`npx -y`** só para testar. Se for usar sempre → instale global (mais rápido).
--   Sempre use **caminho absoluto** para o SQLite.
--   O Playwright pode abrir uma janela de navegador real (Chromium, Firefox, WebKit).
+- Use **`npx -y`** só para testar. Se for usar sempre → instale global (mais rápido).
+- Sempre use **caminho absoluto** para o SQLite.
+- O Playwright pode abrir uma janela de navegador real (Chromium, Firefox, WebKit).
 
 ---
 

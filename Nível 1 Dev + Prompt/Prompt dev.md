@@ -1,3 +1,9 @@
+Aula:
+
+- Em documentos, crie a pasta gamer e adiicone os arquivos app.zip
+- Abra o vscode
+- Crie o arquivo index.html e adicione o código.
+
 ### Prompt: Nível 1
 
 ```bash

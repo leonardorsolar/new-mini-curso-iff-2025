@@ -4,11 +4,39 @@ O Spec Kit é um toolkit open-source que propõe uma nova abordagem chamada Spec
 
 ## https://github.com/github/spec-kit?utm_source=chatgpt.com
 
+Aula Spec Kit:
+
+1- chatgpt: como instlar o 🌱 Spec Kit https://github.com/github/spec-kit?utm_source=chatgpt.com e o que precisa instalar a mais.
+2-verifique: uv --version
+3-Rodar o Spec Kit (no terminal): uvx --from git+https://github.com/github/spec-kit.git specify init app
+Isso vai clonar e rodar o Spec Kit direto do repositório, inicializando o projeto no diretório app
+4- Abra a pasta app no vscode
+5-Abra no terminal o gemini
+6- digiti no terminal do gemini: /specify /plan
+Use o comando /specify e descreva o que você quer construir
+
+```bash
+/specify Quero construir um sistema de gerenciamento de tarefas chamado TaskMaster.
+O usuário deve poder criar projetos, adicionar membros da equipe, atribuir tarefas,
+comentar e mover tarefas entre colunas estilo Kanban. Para essa primeira versão,
+vamos ter 5 usuários pré-definidos: 1 product manager e 4 engenheiros. Criar 3
+projetos de exemplo. As colunas do Kanban são: "A Fazer", "Em Progresso",
+"Em Revisão" e "Concluído". Sem login por enquanto. Cada card de tarefa deve
+permitir mudança de status por drag-and-drop, comentários ilimitados e
+atribuição de usuários. Tarefas atribuídas ao usuário atual devem ter cor diferente.
+```
+
+Agora você especifica a stack tecnológica com /plan:
+
+```bash
+/plan Vamos gerar isso usando html, css e javascript usando Materialize e armazenamento localhost
+```
+
 ## O que é o Spec Kit
 
--   Spec Kit é um toolkit open source criado pelo GitHub para promover um método de desenvolvimento de software guiado por especificações. ([The GitHub Blog][1])
--   Em vez de codificar primeiro e depois documentar, ele propõe que você comece definindo o **“o que”** (o que o software deve fazer, pra quem, por que) — isso chama-se _Specify_. Depois você define o _como_ (pilha tecnológica, arquitetura, restrições) — _Plan_. A seguir divide isso em tarefas pequenas — _Tasks_. E então implementa, verificando em cada fase. ([Visual Studio Magazine][2])
--   Ele também traz uma CLI (linha de comando), templates, prompts, estrutura para organizar esses artefatos. ([GitHub][3])
+- Spec Kit é um toolkit open source criado pelo GitHub para promover um método de desenvolvimento de software guiado por especificações. ([The GitHub Blog][1])
+- Em vez de codificar primeiro e depois documentar, ele propõe que você comece definindo o **“o que”** (o que o software deve fazer, pra quem, por que) — isso chama-se _Specify_. Depois você define o _como_ (pilha tecnológica, arquitetura, restrições) — _Plan_. A seguir divide isso em tarefas pequenas — _Tasks_. E então implementa, verificando em cada fase. ([Visual Studio Magazine][2])
+- Ele também traz uma CLI (linha de comando), templates, prompts, estrutura para organizar esses artefatos. ([GitHub][3])
 
 ---
 
@@ -16,9 +44,9 @@ O Spec Kit é um toolkit open-source que propõe uma nova abordagem chamada Spec
 
 Spec Kit parece útil especialmente em cenários como:
 
--   Projetos _greenfield_ (do zero), onde você está iniciando algo novo. ([Visual Studio Magazine][2])
--   Adicionar features em sistemas existentes, para garantir que tudo se integre bem. ([The GitHub Blog][1])
--   Modernização de código legada (“legacy code”) — definir claramente o que já existe e como evoluir. ([The GitHub Blog][1])
+- Projetos _greenfield_ (do zero), onde você está iniciando algo novo. ([Visual Studio Magazine][2])
+- Adicionar features em sistemas existentes, para garantir que tudo se integre bem. ([The GitHub Blog][1])
+- Modernização de código legada (“legacy code”) — definir claramente o que já existe e como evoluir. ([The GitHub Blog][1])
 
 ---
 
@@ -26,12 +54,12 @@ Spec Kit parece útil especialmente em cenários como:
 
 Para usar o Spec Kit você vai precisar:
 
--   Um sistema compatível: Linux ou macOS, ou Windows com WSL2. ([GitHub][3])
--   Node.js 18+
--   Python 3.11+ instalado. ([GitHub][3])
--   Git. ([Visual Studio Magazine][2])
--   Um “coding agent” de AI (se for usar parte de geração automática): pode ser GitHub Copilot, Claude Code, Gemini CLI, Cursor. ([GitHub][3])
--   Ferramentas de linha de comando como a especificada CLI do Spec Kit. ([GitHub][3])
+- Um sistema compatível: Linux ou macOS, ou Windows com WSL2. ([GitHub][3])
+- Node.js 18+
+- Python 3.11+ instalado. ([GitHub][3])
+- Git. ([Visual Studio Magazine][2])
+- Um “coding agent” de AI (se for usar parte de geração automática): pode ser GitHub Copilot, Claude Code, Gemini CLI, Cursor. ([GitHub][3])
+- Ferramentas de linha de comando como a especificada CLI do Spec Kit. ([GitHub][3])
 
 ---
 
@@ -42,22 +70,22 @@ Aqui vai um guia prático de como começar:
 1. **Clonar (ou instalar) o Spec Kit**
    Você pode instalar via git/CLI. Exemplo dado no repositório:
 
-    ```
-    uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
-    ```
+   ```
+   uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME>
+   ```
 
-    Isso inicializa o seu projeto com a estrutura do Spec Kit. ([GitHub][3])
+   Isso inicializa o seu projeto com a estrutura do Spec Kit. ([GitHub][3])
 
 2. **Inicializar o projeto**
    `specify init` com opções como:
 
-    - escolher o “coding agent” que vai usar (Copilot, Claude, etc.) ([GitHub][3])
-    - definir se vai inicializar git automaticamente, ou em diretório atual, etc. ([GitHub][3])
+   - escolher o “coding agent” que vai usar (Copilot, Claude, etc.) ([GitHub][3])
+   - definir se vai inicializar git automaticamente, ou em diretório atual, etc. ([GitHub][3])
 
 3. **Gerar a especificação (“Specify”)**
    Use o comando `/specify` para descrever em alto nível o que você quer construir. Focar nos requisitos do usuário, fluxos, o “por que”. ([The GitHub Blog][1])
 
-    /specify
+   /specify
 
 ```bash
    # To-Do List App
@@ -76,7 +104,7 @@ Aqui vai um guia prático de como começar:
 4. **Planejamento técnico (“Plan”)**
    Depois que a especificação estiver bem definida, com `/plan` você define o stack, arquitetura, restrições, padrões, etc. ([The GitHub Blog][1])
 
-    ``
+   ``
 
 5. **Divisão em tarefas (“Tasks”)**
    Com base na especificação + plano, gerar tarefas menores, que sejam revisáveis e implementáveis isoladamente. ([The GitHub Blog][1])
@@ -109,9 +137,9 @@ Durante décadas, seguimos quase sempre a mesma linha:
 
 O SDD muda isso completamente:
 
--   As especificações deixam de ser _docs esquecidos_ e passam a ser **executáveis**;
--   A própria IA interpreta a intenção e gera implementações funcionais;
--   Você foca no **"o quê"** e não no **"como"**.
+- As especificações deixam de ser _docs esquecidos_ e passam a ser **executáveis**;
+- A própria IA interpreta a intenção e gera implementações funcionais;
+- Você foca no **"o quê"** e não no **"como"**.
 
 👉 Exemplo: em vez de escrever código em React, você diz _"quero um sistema de fotos com drag and drop"_ e o Spec Kit cria a base do projeto.
 
@@ -121,19 +149,19 @@ O SDD muda isso completamente:
 
 A filosofia do Spec Kit é simples mas poderosa:
 
--   ✅ **Desenvolvimento orientado por intenção**: o _quê_ antes do _como_
--   ✅ **Especificações ricas e vivas**: documentos que evoluem junto com o código
--   ✅ **Refinamento em múltiplas etapas**: iteração em ciclos curtos (/specify → /plan → /tasks → implement)
--   ✅ **IA como parceira**: dependência em LLMs avançados para interpretar intenções
+- ✅ **Desenvolvimento orientado por intenção**: o _quê_ antes do _como_
+- ✅ **Especificações ricas e vivas**: documentos que evoluem junto com o código
+- ✅ **Refinamento em múltiplas etapas**: iteração em ciclos curtos (/specify → /plan → /tasks → implement)
+- ✅ **IA como parceira**: dependência em LLMs avançados para interpretar intenções
 
 ---
 
 ## 📂 Repositório e Instalação
 
--   O Spec Kit é **open-source**, código no GitHub: [github/spec-kit](https://github.com/github/spec-kit)
--   Mantido por **Den Delimarsky (@localden)** e **John Lam (@jflam)**
--   Licença **MIT**: pode usar, modificar e distribuir livremente
--   Issues abertas e comunidade bem receptiva
+- O Spec Kit é **open-source**, código no GitHub: [github/spec-kit](https://github.com/github/spec-kit)
+- Mantido por **Den Delimarsky (@localden)** e **John Lam (@jflam)**
+- Licença **MIT**: pode usar, modificar e distribuir livremente
+- Issues abertas e comunidade bem receptiva
 
 ---
 
@@ -141,11 +169,11 @@ A filosofia do Spec Kit é simples mas poderosa:
 
 ### 🔧 Pré-requisitos
 
--   Linux/macOS (ou WSL2 no Windows)
--   Node.js 18+
--   Python 3.11+
--   Git
--   [uv](https://github.com/astral-sh/uv) para gerenciar pacotes
+- Linux/macOS (ou WSL2 no Windows)
+- Node.js 18+
+- Python 3.11+
+- Git
+- [uv](https://github.com/astral-sh/uv) para gerenciar pacotes
 
 ---
 
@@ -255,10 +283,10 @@ componentes funcionais e hooks customizados.
 
 O Gemini gera:
 
--   `api-spec.json`
--   `data-model.md`
--   `plan.md`
--   `research.md`
+- `api-spec.json`
+- `data-model.md`
+- `plan.md`
+- `research.md`
 
 O Gemini vai gerar documentos detalhados de implementação, incluindo api-spec.json, data-model.md, plan.md, e research.md.
 
@@ -276,21 +304,21 @@ Geralmente segue **OpenAPI/Swagger** em JSON.
 
 **Para que serve:**
 
--   Dá para importar no **Postman** ou **Insomnia** e testar endpoints.
--   Garante que **backend e frontend conversem na mesma língua**.
+- Dá para importar no **Postman** ou **Insomnia** e testar endpoints.
+- Garante que **backend e frontend conversem na mesma língua**.
 
 ```json
 {
-    "paths": {
-        "/tasks": {
-            "get": { "summary": "Lista todas as tarefas" },
-            "post": { "summary": "Cria uma nova tarefa" }
-        },
-        "/tasks/{id}": {
-            "put": { "summary": "Atualiza uma tarefa" },
-            "delete": { "summary": "Remove uma tarefa" }
-        }
+  "paths": {
+    "/tasks": {
+      "get": { "summary": "Lista todas as tarefas" },
+      "post": { "summary": "Cria uma nova tarefa" }
+    },
+    "/tasks/{id}": {
+      "put": { "summary": "Atualiza uma tarefa" },
+      "delete": { "summary": "Remove uma tarefa" }
     }
+  }
 }
 ```
 
@@ -303,27 +331,27 @@ Documento em Markdown que descreve os **modelos de dados** do sistema.
 
 **Para que serve:**
 
--   Define as **entidades principais** (ex.: `Task`, `User`).
--   Mostra atributos, tipos e **relacionamentos**.
--   Ajuda o time a **alinhar antes de codar** o banco de dados ou objetos no código.
+- Define as **entidades principais** (ex.: `Task`, `User`).
+- Mostra atributos, tipos e **relacionamentos**.
+- Ajuda o time a **alinhar antes de codar** o banco de dados ou objetos no código.
 
 ```markdown
 # Data Model
 
 ## Task
 
--   id: string (UUID)
--   title: string
--   description: string
--   status: enum ["todo", "doing", "done"]
--   createdAt: datetime
--   updatedAt: datetime
+- id: string (UUID)
+- title: string
+- description: string
+- status: enum ["todo", "doing", "done"]
+- createdAt: datetime
+- updatedAt: datetime
 
 ## User
 
--   id: string (UUID)
--   name: string
--   email: string
+- id: string (UUID)
+- name: string
+- email: string
 ```
 
 ---
@@ -335,19 +363,19 @@ Documento que descreve o **plano técnico da implementação**.
 
 **Para que serve:**
 
--   Define a **stack tecnológica** (ex.: React, Node, banco de dados, Tailwind).
--   Mostra a **arquitetura** e padrões a seguir.
--   Pode incluir **fluxos de autenticação, deploy e CI/CD**.
+- Define a **stack tecnológica** (ex.: React, Node, banco de dados, Tailwind).
+- Mostra a **arquitetura** e padrões a seguir.
+- Pode incluir **fluxos de autenticação, deploy e CI/CD**.
 
 ```markdown
 # Plano Técnico
 
--   Frontend: React + TypeScript + Vite
--   Backend: Node.js + Express
--   Banco: PostgreSQL
--   Autenticação: JWT
--   Hospedagem: Vercel (frontend) + Railway (backend)
--   Estilo: TailwindCSS
+- Frontend: React + TypeScript + Vite
+- Backend: Node.js + Express
+- Banco: PostgreSQL
+- Autenticação: JWT
+- Hospedagem: Vercel (frontend) + Railway (backend)
+- Estilo: TailwindCSS
 ```
 
 ---
@@ -359,20 +387,20 @@ Documento de **pesquisa e referências técnicas**.
 
 **Para que serve:**
 
--   Guarda estudos de **bibliotecas comparadas** (ex.: Tailwind vs Bootstrap).
--   Inclui links úteis, benchmarks e trade-offs.
--   Justifica **por que a escolha técnica foi feita**.
+- Guarda estudos de **bibliotecas comparadas** (ex.: Tailwind vs Bootstrap).
+- Inclui links úteis, benchmarks e trade-offs.
+- Justifica **por que a escolha técnica foi feita**.
 
 ```markdown
 # Research
 
--   Estado global:
-    -   Redux → robusto, mas pesado.
-    -   Zustand → leve, simples, ideal para MVP.
--   Estilização:
-    -   TailwindCSS escolhido pela velocidade e suporte a design system.
--   Persistência local:
-    -   LocalStorage para MVP (sem necessidade de backend inicial).
+- Estado global:
+  - Redux → robusto, mas pesado.
+  - Zustand → leve, simples, ideal para MVP.
+- Estilização:
+  - TailwindCSS escolhido pela velocidade e suporte a design system.
+- Persistência local:
+  - LocalStorage para MVP (sem necessidade de backend inicial).
 ```
 
 ---
@@ -437,12 +465,12 @@ specify tasks complete T001
 
 No final você terá:
 
--   ✅ Projeto React funcional
--   ✅ Especificações em Markdown
--   ✅ Plano técnico detalhado
--   ✅ Código TypeScript estruturado
--   ✅ Kanban com drag-and-drop
--   ✅ Gerenciamento de estado com Zustand
+- ✅ Projeto React funcional
+- ✅ Especificações em Markdown
+- ✅ Plano técnico detalhado
+- ✅ Código TypeScript estruturado
+- ✅ Kanban com drag-and-drop
+- ✅ Gerenciamento de estado com Zustand
 
 ---
 
@@ -450,29 +478,29 @@ No final você terá:
 
 **Vantagens:**
 
--   🚀 Acelera muito MVPs e protótipos
--   📋 Força clareza nos requisitos
--   📝 Código bem estruturado e documentado
--   🌐 Funciona com várias stacks
--   💸 Gratuito e open-source
+- 🚀 Acelera muito MVPs e protótipos
+- 📋 Força clareza nos requisitos
+- 📝 Código bem estruturado e documentado
+- 🌐 Funciona com várias stacks
+- 💸 Gratuito e open-source
 
 **Desvantagens:**
 
--   🧪 Ainda experimental
--   🔄 Requer refinamento constante
--   📦 Pode gerar código over-engineered
--   🤖 Dependente da qualidade dos prompts
--   ⏳ Limitado pela IA escolhida
+- 🧪 Ainda experimental
+- 🔄 Requer refinamento constante
+- 📦 Pode gerar código over-engineered
+- 🤖 Dependente da qualidade dos prompts
+- ⏳ Limitado pela IA escolhida
 
 ---
 
 ## 💡 Dicas de Ouro
 
--   Seja **específico nas especificações**
--   Não pule a **validação e checklist**
--   Use **checkpoints de refinamento**
--   Teste bastante antes de confiar 100%
--   Itere o ciclo: **/specify → /plan → /tasks → implement → refine**
+- Seja **específico nas especificações**
+- Não pule a **validação e checklist**
+- Use **checkpoints de refinamento**
+- Teste bastante antes de confiar 100%
+- Itere o ciclo: **/specify → /plan → /tasks → implement → refine**
 
 ---
 
