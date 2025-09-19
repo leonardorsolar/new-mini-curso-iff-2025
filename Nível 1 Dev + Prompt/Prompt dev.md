@@ -23,6 +23,8 @@ Use o piso repetido no fundo platformPack_tile013.png
 Os blocos (platformPack_tile043.png) servem de obstáculos para pular.
 Há gravidade e colisão simples
 
+XXXXXXXXXXX
+
 # Base para estudos:
 
 1- Porque precisa do live server para rodar?
