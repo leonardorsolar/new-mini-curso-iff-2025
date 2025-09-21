@@ -9,19 +9,19 @@ Perfeito! Vamos criar um **roteiro similar**, mas agora voltado para o **GitHub 
 O **GitHub Copilot** é uma extensão de inteligência artificial desenvolvida pela GitHub e OpenAI que sugere linhas de código ou trechos completos diretamente no **Visual Studio Code**.
 Ele pode:
 
--   Escrever código em várias linguagens (JavaScript, Python, C#, etc.)
--   Completar funções ou métodos
--   Sugerir trechos de teste
--   Ajudar a refatorar código
--   Gerar documentação básica
+- Escrever código em várias linguagens (JavaScript, Python, C#, etc.)
+- Completar funções ou métodos
+- Sugerir trechos de teste
+- Ajudar a refatorar código
+- Gerar documentação básica
 
 **Vantagens principais**:
 
--   Gratuito para estudantes ou contas pessoais (Copilot Free)
--   Funciona diretamente no **VS Code**
--   Aprende com o contexto do seu código
--   Suporta múltiplas linguagens e frameworks populares
--   Integração com GitHub para acelerar commits e pull requests
+- Gratuito para estudantes ou contas pessoais (Copilot Free)
+- Funciona diretamente no **VS Code**
+- Aprende com o contexto do seu código
+- Suporta múltiplas linguagens e frameworks populares
+- Integração com GitHub para acelerar commits e pull requests
 
 ---
 
@@ -32,9 +32,9 @@ Ele pode:
 3. Você pode aceitar, rejeitar ou modificar a sugestão.
 4. Funciona com **atalhos e comandos internos** do VS Code para controlar as sugestões:
 
--   `Tab` → aceita a sugestão
--   `Esc` → ignora a sugestão
--   `Ctrl+Enter` ou `Cmd+Enter` → mostra mais opções
+- `Tab` → aceita a sugestão
+- `Esc` → ignora a sugestão
+- `Ctrl+Enter` ou `Cmd+Enter` → mostra mais opções
 
 > Diferente do Gemini CLI, o Copilot **não é um terminal**: ele atua dentro do editor VS Code, interagindo diretamente com os arquivos.
 
@@ -44,9 +44,9 @@ Ele pode:
 
 ### 1. Pré-requisitos
 
--   VS Code atualizado
--   Conta **GitHub** (pessoal ou educacional)
--   Conexão com a internet
+- VS Code atualizado
+- Conta **GitHub** (pessoal ou educacional)
+- Conexão com a internet
 
 ### 2. Instalação
 
@@ -68,14 +68,14 @@ Ele pode:
 
 ### 1. Escrevendo código : Sugestões de Código
 
-no vascode crie uma arquivo:
+no Vscode crie uma arquivo:
 
 Se tiver instalado o node: test.js
 Se tiver instlado o java: test.java
 Se tiver isntlado o python: test.py
 
--   Comece a digitar uma função ou comentário descritivo
--   O Copilot sugerirá linhas automaticamente
+- Comece a digitar uma função ou comentário descritivo
+- O Copilot sugerirá linhas automaticamente
 
 Exemplo em javascript:
 
@@ -91,8 +91,8 @@ O Copilot pode sugerir:
 }
 ```
 
--   Aceite com `Tab`
--   Ignore com `Esc`
+- Aceite com `Tab`
+- Ignore com `Esc`
 
 ### 2. Comentários como prompts : GitHub Copilot pode gerar trechos de código
 
@@ -102,13 +102,13 @@ Você também pode **descrever a função em um comentário**, e o Copilot gera 
 // Função para buscar usuário por ID no banco de dados
 ```
 
--   Sugestão automática: função completa com query simulada
+- Sugestão automática: função completa com query simulada
 
 ### 3. Refatoração e melhorias
 
--   Coloque o cursor sobre o código
--   Pressione `Ctrl+.` → Copilot sugere melhorias ou refatoração
--   Aceite ou modifique a sugestão
+- Coloque o cursor sobre o código
+- Pressione `Ctrl+.` → Copilot sugere melhorias ou refatoração
+- Aceite ou modifique a sugestão
 
 ### 4- Depuração de Código
 
@@ -116,22 +116,43 @@ Você também pode **descrever a função em um comentário**, e o Copilot gera 
 
 ## Comandos e atalhos úteis
 
--   `Alt+\[` ou `Alt+\]` → navegar entre sugestões
--   `Ctrl+Enter` → abrir painel de sugestões
--   `Ctrl+Shift+P → Copilot` → lista todos os comandos do Copilot
--   `/` → inserir comandos inline (dependendo da configuração)
+- `Alt+\[` ou `Alt+\]` → navegar entre sugestões
+- `Ctrl+Enter` → abrir painel de sugestões
+- `Ctrl+Shift+P → Copilot` → lista todos os comandos do Copilot
+- `/` → inserir comandos inline (dependendo da configuração)
 
 ---
 
-Perfeito! Vamos separar e explicar **cada modo do GitHub Copilot** de forma clara, porque são três funcionalidades distintas: **Agent**, **Ask** e **Edit**.
+---
+
+# 📌 **Comandos do Cursor (IA no editor)**
+
+| **Comando**        | **O que faz**                                            | **Quando usar**                                           | **Exemplo prático**                                            |
+| ------------------ | -------------------------------------------------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
+| **Explain**        | Explica o código em linguagem natural.                   | Quando você não entende um trecho ou quer aprender.       | “Explique esta função recursiva em Python.”                    |
+| **Explain Commit** | Explica o que mudou em um commit do Git.                 | Para revisar alterações no histórico de versão.           | “Explique o commit `a7f9c3`.”                                  |
+| **Review**         | Faz uma revisão crítica do código, sugerindo melhorias.  | Antes de finalizar um código ou abrir PR.                 | “Revise este arquivo e diga se há más práticas.”               |
+| **Comment**        | Insere comentários no código explicando cada parte.      | Para documentar automaticamente ou ajudar alunos/novatos. | Transforma código em versão comentada.                         |
+| **Fix**            | Detecta e corrige erros no código selecionado.           | Quando aparece erro de compilação ou lógica.              | “Conserte o bug nesta função que não retorna o valor correto.” |
+| **Generate**       | Gera novo código a partir de um pedido.                  | Para criar funções, classes ou arquivos inteiros.         | “Crie um CRUD de usuários em Express.js.”                      |
+| **Refactor**       | Reescreve o código para deixá-lo mais limpo e eficiente. | Quando o código funciona, mas está mal estruturado.       | “Refatore esta função para aplicar SOLID.”                     |
+| **Test**           | Gera testes automatizados para o código.                 | Para cobrir funções e classes com testes.                 | “Crie testes unitários para este método em Jest.”              |
+| **Docstring**      | Cria docstrings/padrões de documentação.                 | Para documentar funções, classes e módulos.               | “Adicione docstrings estilo Google neste arquivo Python.”      |
 
 ---
+
+⚡️ Assim você pode escolher o comando certo dependendo da situação:
+
+- Aprender → **Explain / Comment**
+- Melhorar → **Review / Refactor**
+- Corrigir → **Fix**
+- Criar → **Generate / Test / Docstring**
 
 ## 1️⃣ Modo **Agent**
 
--   É o **modo inteligente do Copilot** que age como um assistente “ativo” dentro do VS Code.
--   Ele **sugere código automaticamente** baseado no contexto do seu projeto e nos arquivos abertos.
--   Funciona em **background**, observando o que você escreve e propondo linhas ou blocos de código.
+- É o **modo inteligente do Copilot** que age como um assistente “ativo” dentro do VS Code.
+- Ele **sugere código automaticamente** baseado no contexto do seu projeto e nos arquivos abertos.
+- Funciona em **background**, observando o que você escreve e propondo linhas ou blocos de código.
 
 **Exemplo:**
 Você começa a escrever uma função em JavaScript:
@@ -152,9 +173,9 @@ O **modo Agent** pode automaticamente sugerir:
 
 ## 2️⃣ Modo **Ask**
 
--   É o **modo de pergunta direta** ao Copilot.
--   Você faz **uma pergunta ou descreve uma tarefa** e o Copilot responde com código ou explicação.
--   É ótimo quando você quer **uma resposta específica**, em vez de esperar sugestões automáticas.
+- É o **modo de pergunta direta** ao Copilot.
+- Você faz **uma pergunta ou descreve uma tarefa** e o Copilot responde com código ou explicação.
+- É ótimo quando você quer **uma resposta específica**, em vez de esperar sugestões automáticas.
 
 **Exemplo de Ask:**
 
@@ -166,7 +187,7 @@ O Copilot responde com o código correspondente:
 
 ```javascript
 function filtrarPares(arr) {
-    return arr.filter((num) => num % 2 === 0)
+  return arr.filter((num) => num % 2 === 0);
 }
 ```
 
@@ -174,9 +195,9 @@ function filtrarPares(arr) {
 
 ## 3️⃣ Modo **Edit**
 
--   É o **modo de edição assistida**.
--   Você seleciona **um trecho de código existente** e pede ao Copilot para **refatorar, melhorar ou adicionar funcionalidades**.
--   Ele sugere mudanças **inline**, e você pode aceitar ou rejeitar.
+- É o **modo de edição assistida**.
+- Você seleciona **um trecho de código existente** e pede ao Copilot para **refatorar, melhorar ou adicionar funcionalidades**.
+- Ele sugere mudanças **inline**, e você pode aceitar ou rejeitar.
 
 **Exemplo de Edit:**
 
@@ -184,7 +205,7 @@ Código original:
 
 ```javascript
 function somar(a, b) {
-    return a + b
+  return a + b;
 }
 ```
 
@@ -198,10 +219,10 @@ Sugestão gerada:
 
 ```javascript
 function somar(a, b) {
-    if (typeof a !== "number" || typeof b !== "number") {
-        throw new Error("Parâmetros devem ser números")
-    }
-    return a + b
+  if (typeof a !== "number" || typeof b !== "number") {
+    throw new Error("Parâmetros devem ser números");
+  }
+  return a + b;
 }
 ```
 

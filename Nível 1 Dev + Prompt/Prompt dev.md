@@ -1,6 +1,6 @@
 Aula:
 
-- Em documentos, crie a pasta gamer e adiicone os arquivos app.zip
+- Em documentos, crie a pasta gamer e adicone os arquivos app.zip
 - Abra o vscode
 - Crie o arquivo index.html e adicione o código.
 

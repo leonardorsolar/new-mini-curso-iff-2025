@@ -6,19 +6,19 @@
 
 ### 🚀 Características
 
--   Arrastar e soltar componentes visuais.
--   Customização avançada via **código**.
--   Gera **código real** que pode ser modificado.
--   Acelera o desenvolvimento sem perder flexibilidade.
+- Arrastar e soltar componentes visuais.
+- Customização avançada via **código**.
+- Gera **código real** que pode ser modificado.
+- Acelera o desenvolvimento sem perder flexibilidade.
 
 ---
 
 ### Exemplos de ferramentas Low-code
 
--   **Bolt.new (Lovable)** → gera apps completos em React/Next.js, editáveis no VS Code.
--   **Retool** → cria painéis administrativos e integrações com APIs.
--   **OutSystems** → plataforma low-code empresarial para apps grandes.
--   **Mendix** → desenvolvimento rápido de aplicações corporativas.
+- **Bolt.new (Lovable)** → gera apps completos em React/Next.js, editáveis no VS Code.
+- **Retool** → cria painéis administrativos e integrações com APIs.
+- **OutSystems** → plataforma low-code empresarial para apps grandes.
+- **Mendix** → desenvolvimento rápido de aplicações corporativas.
 
 ---
 
@@ -38,5 +38,8 @@ Funcionalidades:
 - Marcar tarefas como concluídas
 - Remover tarefas
 - Listar todas as tarefas
-Use HTML, CSS e JavaScript, com interface simples.
 ```
+
+Opicional:
+Use HTML, CSS e JavaScript, com interface simples.
+Use React Js.
