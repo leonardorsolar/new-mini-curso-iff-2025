@@ -108,6 +108,8 @@ digite
  @Nível\ 3\ Dev\ +\ Ferramentas/04\ InterfaceCli/Teste\ Prático.md
 ```
 
+Outros exemplos:
+
 ```text
 Analise este código e me diga o que ele faz: @meu_codigo.py
 ```
