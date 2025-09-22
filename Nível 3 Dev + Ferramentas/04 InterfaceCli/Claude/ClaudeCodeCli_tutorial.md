@@ -4,11 +4,11 @@
 
 Neste tutorial abrangente, você dominará o Claude Code CLI do zero, aprendendo a usar esta ferramenta revolucionária de codificação assistida por IA. Ao final, você será capaz de:
 
--   Instalar e configurar o Claude Code em qualquer sistema
--   Usar comandos essenciais para acelerar seu desenvolvimento
--   Integrar IA no seu fluxo de trabalho diário
--   Automatizar tarefas repetitivas
--   Trabalhar com projetos complexos de forma eficiente
+- Instalar e configurar o Claude Code em qualquer sistema
+- Usar comandos essenciais para acelerar seu desenvolvimento
+- Integrar IA no seu fluxo de trabalho diário
+- Automatizar tarefas repetitivas
+- Trabalhar com projetos complexos de forma eficiente
 
 ---
 
@@ -20,12 +20,12 @@ Claude Code é uma ferramenta de codificação agêntica da Anthropic que vive n
 
 **Características únicas:**
 
--   **🖥️ Terminal nativo** - Não é mais uma janela de chat ou IDE separada
--   **🤖 IA agêntica** - Executa ações reais no seu código
--   **📁 Contexto completo** - Entende toda a estrutura do projeto
--   **⚡ Execução direta** - Edita arquivos, executa comandos, cria commits
--   **🔧 Filosofia Unix** - Componível e scriptável
--   **🔒 Enterprise-ready** - Segurança e privacidade de nível empresarial
+- **🖥️ Terminal nativo** - Não é mais uma janela de chat ou IDE separada
+- **🤖 IA agêntica** - Executa ações reais no seu código
+- **📁 Contexto completo** - Entende toda a estrutura do projeto
+- **⚡ Execução direta** - Edita arquivos, executa comandos, cria commits
+- **🔧 Filosofia Unix** - Componível e scriptável
+- **🔒 Enterprise-ready** - Segurança e privacidade de nível empresarial
 
 ### 🆚 Claude Code vs. Outras Ferramentas
 
@@ -41,12 +41,12 @@ Claude Code é uma ferramenta de codificação agêntica da Anthropic que vive n
 
 **Perfeito para:**
 
--   Desenvolvedores que vivem no terminal
--   Automação de workflows de desenvolvimento
--   Refatoração de código em larga escala
--   Debugging complexo de projetos
--   Integração CI/CD
--   Análise de logs em tempo real
+- Desenvolvedores que vivem no terminal
+- Automação de workflows de desenvolvimento
+- Refatoração de código em larga escala
+- Debugging complexo de projetos
+- Integração CI/CD
+- Análise de logs em tempo real
 
 ---
 
@@ -56,16 +56,16 @@ Claude Code é uma ferramenta de codificação agêntica da Anthropic que vive n
 
 **Requisitos obrigatórios:**
 
--   Node.js 18 ou mais recente
--   Terminal/command prompt
--   Conexão com internet
--   Conta Claude (gratuita ou paga)
+- Node.js 18 ou mais recente
+- Terminal/command prompt
+- Conexão com internet
+- Conta Claude (gratuita ou paga)
 
 **Sistemas suportados:**
 
--   ✅ **Windows** 10/11 (PowerShell, CMD, WSL)
--   ✅ **macOS** 10.15+ (Terminal, iTerm2)
--   ✅ **Linux** Ubuntu 18.04+, Fedora, Arch, etc.
+- ✅ **Windows** 10/11 (PowerShell, CMD, WSL)
+- ✅ **macOS** 10.15+ (Terminal, iTerm2)
+- ✅ **Linux** Ubuntu 18.04+, Fedora, Arch, etc.
 
 ### Processo de Instalação
 
@@ -149,10 +149,10 @@ Tenha um conta pro e escolha 1
 
 Essa configuração otimiza seu terminal para trabalhar melhor com Claude Code, especialmente:
 
--   Shift+Enter para quebras de linha - Permite escrever prompts multi-linha
--   Formatação melhorada - Melhor display de código e respostas
--   Navegação otimizada - Shortcuts para histórico e comandos
-    🎯 Recomendação: Escolha opção 1 (Yes)
+- Shift+Enter para quebras de linha - Permite escrever prompts multi-linha
+- Formatação melhorada - Melhor display de código e respostas
+- Navegação otimizada - Shortcuts para histórico e comandos
+  🎯 Recomendação: Escolha opção 1 (Yes)
 
 ---
 
@@ -188,13 +188,219 @@ Localização apropriada - dentro do seu Documents
 
 Enter
 
+Tutorial da aula:
+
+## 🚀 Passo a Passo
+
+### 1. Start
+
+# Navegue até a pasta do projeto
+
+cd "Nível 3 Dev + Ferramentas/04 InterfaceCli/Claude/"
+
+# Abra o VSCode na pasta atual
+
+code .
+
+# No terminal do VSCode, inicie o Claude CLI
+
+claude
+
+### 2. Ativar Plan Mode
+
+```bash
+# Pressionar no teclado:
+Shift+Tab Shift+Tab
+```
+
+### 3. Para anexar arquivos:
+
+```bash
+@"Teste Prático.md"
+
+# OU durante a conversa (arrastar e soltar)
+# Arraste o arquivo para o terminal
+
+# OU pedir para ler arquivo específico
+Leia o conteúdo do arquivo "Teste Prático.md"
+```
+
+## 🔄 Como Alternar Entre os Modos
+
+### Durante a execução (Teclas de atalho):
+
+```bash
+# Alternar entre Default ↔ Auto ↔ Plan
+Shift+Tab  # Cicla entre os 3 modos
+
+# Para sair do Plan Mode
+Shift+Tab  # Novamente
+```
+
+| Modo       | Ideal Para                                                | Exemplo                                                                             |
+| ---------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Padrão** | Projetos críticos, primeira vez                           | Produção, código importante                                                         |
+| **Auto**   | Desenvolvimento rápido, protótipos                        | "Conte ao Claude para trabalhar numa feature e vá tomar café enquanto ele faz isso" |
+| **Plan**   | Novos recursos, desafios complexos, refatoração de código | Arquitetura, planejamento estratégico                                               |
+
+### 3. Prompt correto
+
+```
+think hard
+
+Análise o arquivo "Teste Prático.md" que foi anexado e:
+
+1. Crie um plano detalhado de implementação
+2. Defina arquitetura e stack tecnológica
+3. Estruture o cronograma por etapas
+
+Não implemente ainda - apenas planeje!
+
+```
+
+### 4. Prompt específicos
+
+### Prompt 1
+
+Salve este plano detalhado em um arquivo chamado "plano-implementacao.md" na pasta atual
+
+### Prompt 2
+
+Exporte este plano para um arquivo markdown chamado "plano-teste-pratico.md" incluindo:
+
+- Sumário executivo
+- Cronograma detalhado
+- Stack tecnológica
+- Arquitetura proposta
+- Próximos passos
+
+### Prompt 3
+
+Crie um arquivo "PLANO.md" na pasta atual com o seguinte conteúdo:
+
+1. Todo o plano detalhado que você gerou
+2. Formatação markdown limpa
+3. Seções bem organizadas
+4. Checklist de tarefas
+5. Cronograma por sprints
+
+Perfeito! 🎉 Agora que o plano está salvo, vamos para os **próximos passos** de implementação:
+
+## 🚀 Próximos Passos no Claude CLI
+
+### **1. Sair do Plan Mode**
+
+```bash
+# Pressione para sair do modo planejamento
+Shift+Tab
+```
+
+### **2. Iniciar implementação seguindo o plano**
+
+```bash
+Agora vamos implementar! Com base no plano salvo em "plano-implementacao.md":
+
+1. Comece pela ETAPA 1 do cronograma (Setup do projeto)
+2. Crie a estrutura de pastas conforme definido no plano
+3. Configure o ambiente de desenvolvimento
+4. Inicialize o projeto com as dependências listadas
+
+Siga exatamente o que foi planejado no arquivo.
+```
+
+### **3. Implementação por etapas**
+
+#### **Etapa 1 - Setup (Dia 1)**
+
+```bash
+Implemente a primeira etapa do plano:
+- Crie a estrutura de pastas definida
+- Configure package.json com as dependências
+- Setup do ambiente TypeScript
+- Configuração inicial do projeto
+
+Trabalhe apenas nesta etapa por enquanto.
+```
+
+#### **Depois de cada etapa concluída:**
+
+```bash
+/clear  # Limpa contexto para próxima etapa
+
+# Anexa o plano novamente
+@plano-implementacao.md
+
+# Continua próxima etapa
+Agora implemente a ETAPA 2 do plano (Backend base)
+```
+
+## 🎯 Comandos de Controle Durante Implementação
+
+### **Verificar progresso:**
+
+```bash
+Mostre o status atual do projeto comparado com o plano em "plano-implementacao.md"
+```
+
+### **Resolver problemas:**
+
+```bash
+Tenho um erro na implementação. Consulte o plano e me ajude a resolver mantendo a arquitetura definida.
+```
+
+### **Próxima etapa:**
+
+```bash
+Etapa atual concluída! Consulte o plano e me prepare para a próxima fase.
+```
+
+## 💡 Fluxo Recomendado
+
+```bash
+# 1. Sair do Plan Mode
+Shift+Tab
+
+# 2. Começar implementação
+Consulte o arquivo "plano-implementacao.md" e implemente a primeira etapa: Setup do projeto.
+
+# 3. Após cada etapa
+/clear
+@plano-implementacao.md
+Continue para a próxima etapa conforme cronograma
+
+# 4. Verificar se está seguindo o plano
+Compare o progresso atual com o cronograma no plano
+```
+
+#### Para Fullstack
+
+```
+Crie projeto fullstack completo:
+1. Frontend React/Vue
+2. Backend Node.js/Express
+3. Banco de dados
+4. Docker setup
+5. README com instruções
+```
+
+## 💡 Comandos Slash Reais do Claude CLI
+
+```bash
+/help          # Lista todos os comandos disponíveis
+/clear         # Limpa o contexto da conversa
+/model opus    # Troca para modelo Opus
+/model sonnet  # Troca para modelo Sonnet
+/compact       # Compacta a conversa
+/exit          # Sair do CLI
+```
+
 ## 🚀 Primeiros Passos
 
 ### Sua primeira interação
 
 ### Integração com ide
 
-/ide bsuca as suas ide (podendo conecatar com ide)
+/ide busca as suas ide (podendo conecatar com ide)
 
 ### Arquivo CLAUDE.md
 
@@ -303,18 +509,18 @@ claude
 
 ## Arquitetura
 
--   Linguagem principal: [detectada]
--   Framework: [detectado]
--   Estrutura de pastas: [analisada]
+- Linguagem principal: [detectada]
+- Framework: [detectado]
+- Estrutura de pastas: [analisada]
 
 ## Convenções de código
 
--   [Padrões identificados]
--   [Estilo de nomenclatura]
+- [Padrões identificados]
+- [Estilo de nomenclatura]
 
 ## Dependências principais
 
--   [Lista gerada automaticamente]
+- [Lista gerada automaticamente]
 ```
 
 ### Trabalhando com contexto
@@ -505,10 +711,10 @@ em fix.md:
 ```markdown
 Este comando serve para corrigir defeitos.
 
--   Faça um plano
--   Utilize context7 para analisar a biblioteca
--   Rode os testes para tentar identificar aonde está quebrando
--   Faça perguntas de clarificação
+- Faça um plano
+- Utilize context7 para analisar a biblioteca
+- Rode os testes para tentar identificar aonde está quebrando
+- Faça perguntas de clarificação
 ```
 
 Assim vocẽ pode criar comando genéricos de templates.
@@ -559,14 +765,14 @@ Use as melhores práticas para deploy seguro.
 
 ```json
 {
-    "pre-commit": {
-        "command": "claude -p 'Revise as mudanças staged para problemas de qualidade'",
-        "enabled": true
-    },
-    "post-merge": {
-        "command": "claude -p 'Analise conflitos de merge e sugira melhorias'",
-        "enabled": true
-    }
+  "pre-commit": {
+    "command": "claude -p 'Revise as mudanças staged para problemas de qualidade'",
+    "enabled": true
+  },
+  "post-merge": {
+    "command": "claude -p 'Analise conflitos de merge e sugira melhorias'",
+    "enabled": true
+  }
 }
 ```
 
@@ -585,22 +791,22 @@ MCP permite que Claude leia documentos no Google Drive, atualize tickets no Jira
 
 ```json
 {
-    "mcpServers": {
-        "github": {
-            "command": "npx",
-            "args": ["@modelcontextprotocol/server-github"],
-            "env": {
-                "GITHUB_PERSONAL_ACCESS_TOKEN": "sua_token_aqui"
-            }
-        },
-        "slack": {
-            "command": "npx",
-            "args": ["@modelcontextprotocol/server-slack"],
-            "env": {
-                "SLACK_BOT_TOKEN": "xoxb-sua-token"
-            }
-        }
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "sua_token_aqui"
+      }
+    },
+    "slack": {
+      "command": "npx",
+      "args": ["@modelcontextprotocol/server-slack"],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-sua-token"
+      }
     }
+  }
 }
 ```
 
@@ -996,13 +1202,13 @@ Analise @src/api/ especificamente para:
 
 ```json
 {
-    "defaultModel": "claude-sonnet-4",
-    "maxTurns": 10,
-    "outputFormat": "text",
-    "allowedTools": ["Write", "Bash(git:*)", "Bash(npm:*)", "Bash(docker:*)"],
-    "disallowedTools": ["Bash(rm:*)", "Bash(sudo:*)"],
-    "autoSave": true,
-    "verboseLogging": false
+  "defaultModel": "claude-sonnet-4",
+  "maxTurns": 10,
+  "outputFormat": "text",
+  "allowedTools": ["Write", "Bash(git:*)", "Bash(npm:*)", "Bash(docker:*)"],
+  "disallowedTools": ["Bash(rm:*)", "Bash(sudo:*)"],
+  "autoSave": true,
+  "verboseLogging": false
 }
 ```
 
@@ -1013,16 +1219,16 @@ Analise @src/api/ especificamente para:
 ```json
 // tasks.json
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Claude Review",
-            "type": "shell",
-            "command": "claude",
-            "args": ["-p", "Review current file for issues"],
-            "group": "build"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Claude Review",
+      "type": "shell",
+      "command": "claude",
+      "args": ["-p", "Review current file for issues"],
+      "group": "build"
+    }
+  ]
 }
 ```
 
@@ -1047,55 +1253,55 @@ nnoremap <leader>ct :ClaudeTest<CR>
 ```yaml
 name: Claude Code Review
 on:
-    pull_request:
-        types: [opened, synchronize]
+  pull_request:
+    types: [opened, synchronize]
 
 jobs:
-    claude-review:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
+  claude-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-            - name: Setup Node.js
-              uses: actions/setup-node@v3
-              with:
-                  node-version: "18"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-            - name: Install Claude Code
-              run: npm install -g @anthropic-ai/claude-code
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
 
-            - name: Authenticate Claude
-              env:
-                  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-              run: |
-                  echo "$ANTHROPIC_API_KEY" | claude auth
+      - name: Authenticate Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          echo "$ANTHROPIC_API_KEY" | claude auth
 
-            - name: Review Changes
-              run: |
-                  git diff origin/main...HEAD | claude -p "
-                  Analise estas mudanças de código para:
-                  1. Bugs potenciais
-                  2. Problemas de performance
-                  3. Violações de padrões de código
-                  4. Falta de testes
-                  5. Problemas de segurança
+      - name: Review Changes
+        run: |
+          git diff origin/main...HEAD | claude -p "
+          Analise estas mudanças de código para:
+          1. Bugs potenciais
+          2. Problemas de performance
+          3. Violações de padrões de código
+          4. Falta de testes
+          5. Problemas de segurança
 
-                  Formate como comentário de PR do GitHub.
-                  " --output-format json > review.json
+          Formate como comentário de PR do GitHub.
+          " --output-format json > review.json
 
-            - name: Post Review Comment
-              uses: actions/github-script@v6
-              with:
-                  script: |
-                      const fs = require('fs');
-                      const review = JSON.parse(fs.readFileSync('review.json', 'utf8'));
+      - name: Post Review Comment
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const review = JSON.parse(fs.readFileSync('review.json', 'utf8'));
 
-                      github.rest.issues.createComment({
-                        issue_number: context.issue.number,
-                        owner: context.repo.owner,
-                        repo: context.repo.repo,
-                        body: `## 🤖 Claude Code Review\n\n${review.content}`
-                      });
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## 🤖 Claude Code Review\n\n${review.content}`
+            });
 ```
 
 ---
@@ -1687,23 +1893,23 @@ Use Apache Kafka e PostgreSQL.
 
 **Links Essenciais:**
 
--   🌐 **Documentação Oficial:** [docs.anthropic.com/claude-code](https://docs.anthropic.com/claude-code)
--   💬 **Discord da Comunidade:** [discord.gg/claude](https://discord.gg/claude)
--   🐛 **Issues GitHub:** [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code)
--   📖 **Guias e Tutoriais:** [claude.ai/code](https://claude.ai/code)
--   🎬 **Vídeos Oficiais:** Canal YouTube Anthropic
--   📝 **Blog Posts:** [anthropic.com/engineering](https://anthropic.com/engineering)
+- 🌐 **Documentação Oficial:** [docs.anthropic.com/claude-code](https://docs.anthropic.com/claude-code)
+- 💬 **Discord da Comunidade:** [discord.gg/claude](https://discord.gg/claude)
+- 🐛 **Issues GitHub:** [github.com/anthropics/claude-code](https://github.com/anthropics/claude-code)
+- 📖 **Guias e Tutoriais:** [claude.ai/code](https://claude.ai/code)
+- 🎬 **Vídeos Oficiais:** Canal YouTube Anthropic
+- 📝 **Blog Posts:** [anthropic.com/engineering](https://anthropic.com/engineering)
 
 ### Ferramentas Complementares
 
 **Extensões e Integrações:**
 
--   **ccexp** - CLI interativo para descobrir configurações
--   **cchistory** - Histórico de comandos Claude Code
--   **cclogviewer** - Visualizador de logs em HTML
--   **CC Notify** - Notificações desktop
--   **cchooks** - SDK Python para hooks
--   **claude-code-hooks-sdk** - SDK PHP para hooks
+- **ccexp** - CLI interativo para descobrir configurações
+- **cchistory** - Histórico de comandos Claude Code
+- **cclogviewer** - Visualizador de logs em HTML
+- **CC Notify** - Notificações desktop
+- **cchooks** - SDK Python para hooks
+- **claude-code-hooks-sdk** - SDK PHP para hooks
 
 ### Learning Path
 
@@ -1711,26 +1917,26 @@ Use Apache Kafka e PostgreSQL.
 
 1. **Semana 1 - Fundamentos**
 
-    - Instalação e configuração
-    - Comandos básicos
-    - Primeiro projeto simples
+   - Instalação e configuração
+   - Comandos básicos
+   - Primeiro projeto simples
 
 2. **Semana 2 - Produtividade**
 
-    - Comandos slash
-    - Workflows eficientes
-    - Debugging
+   - Comandos slash
+   - Workflows eficientes
+   - Debugging
 
 3. **Semana 3 - Automação**
 
-    - Scripts e pipes
-    - Comandos personalizados
-    - Integração CI/CD
+   - Scripts e pipes
+   - Comandos personalizados
+   - Integração CI/CD
 
 4. **Semana 4 - Avançado**
-    - MCP integrations
-    - Hooks e configurações
-    - Performance optimization
+   - MCP integrations
+   - Hooks e configurações
+   - Performance optimization
 
 ### Certificações e Competências
 
@@ -1738,31 +1944,31 @@ Use Apache Kafka e PostgreSQL.
 
 **Iniciante** ✅
 
--   Instalar e configurar Claude Code
--   Usar comandos básicos
--   Criar projetos simples
--   Entender modes de operação
+- Instalar e configurar Claude Code
+- Usar comandos básicos
+- Criar projetos simples
+- Entender modes de operação
 
 **Intermediário** 🚀
 
--   Workflows automatizados
--   Comandos personalizados
--   Integração com ferramentas
--   Debugging eficiente
+- Workflows automatizados
+- Comandos personalizados
+- Integração com ferramentas
+- Debugging eficiente
 
 **Avançado** 🎯
 
--   MCP configurations
--   Enterprise deployments
--   Complex automation
--   Security best practices
+- MCP configurations
+- Enterprise deployments
+- Complex automation
+- Security best practices
 
 **Expert** 🏆
 
--   Custom integrations
--   Performance optimization
--   Team training
--   Contributing back to community
+- Custom integrations
+- Performance optimization
+- Team training
+- Contributing back to community
 
 ---
 
@@ -1774,24 +1980,24 @@ Claude Code CLI representa uma mudança fundamental na forma como desenvolvemos 
 
 **✨ Filosofia Core:**
 
--   Terminal-first approach
--   Composable e scriptable
--   Ação direta, não apenas sugestões
--   Unix philosophy aplicada à IA
+- Terminal-first approach
+- Composable e scriptable
+- Ação direta, não apenas sugestões
+- Unix philosophy aplicada à IA
 
 **🚀 Benefícios Reais:**
 
--   **10x productivity** em tarefas repetitivas
--   **Debugging inteligente** com contexto completo
--   **Automation eficiente** de workflows
--   **Code quality** consistente via automation
+- **10x productivity** em tarefas repetitivas
+- **Debugging inteligente** com contexto completo
+- **Automation eficiente** de workflows
+- **Code quality** consistente via automation
 
 **🛡️ Boas Práticas:**
 
--   Use contexto específico, não genérico
--   Combine com ferramentas Unix
--   Configure permissões apropriadas
--   Mantenha security em mente sempre
+- Use contexto específico, não genérico
+- Combine com ferramentas Unix
+- Configure permissões apropriadas
+- Mantenha security em mente sempre
 
 ### 🎯 Seus Próximos Passos:
 
@@ -1804,17 +2010,17 @@ Claude Code CLI representa uma mudança fundamental na forma como desenvolvemos 
 
 Com Claude Code CLI, você não está apenas aprendendo uma ferramenta - está abraçando o futuro do desenvolvimento de software. Um futuro onde:
 
--   **IA e humanos colaboram** naturalmente
--   **Tarefas repetitivas são automatizadas**
--   **Qualidade de código é consistente**
--   **Produtividade é multiplicada, não apenas adicionada**
+- **IA e humanos colaboram** naturalmente
+- **Tarefas repetitivas são automatizadas**
+- **Qualidade de código é consistente**
+- **Produtividade é multiplicada, não apenas adicionada**
 
 ### 🤝 Contribua com a Comunidade
 
--   Compartilhe seus workflows no Discord
--   Contribua com comandos personalizados
--   Reporte bugs e sugestões
--   Ajude outros desenvolvedores
+- Compartilhe seus workflows no Discord
+- Contribua com comandos personalizados
+- Reporte bugs e sugestões
+- Ajude outros desenvolvedores
 
 **Lembre-se:** A melhor forma de dominar Claude Code é usando-o diariamente. Comece pequeno, seja consistente, e gradualmente incorpore funcionalidades mais avançadas.
 
@@ -1913,3 +2119,231 @@ Quando estiver no modo interativo (`claude`), você pode usar comandos especiais
 | `/optimize` | Otimiza performance        | `/optimize algoritmo_busca`              |
 
 ---
+
+# Tutorial Claude CLI - Resolvendo Desafios de Desenvolvimento
+
+## 🎯 Objetivo
+
+Usar o Claude CLI para resolver desafios de programação anexando arquivos `.md` com enunciados e gerando soluções completas.
+
+## 📋 Pré-requisitos
+
+- Claude CLI instalado
+- Arquivo de desafio (ex: `Teste Prático.md`)
+- Terminal/Prompt de comando
+
+## 🚀 Passo a Passo
+
+### 1. Navegue até o projeto
+
+Navegue até a pasta do projeto: Nível 3 Dev + Ferramentas/04 InterfaceCli/Claude/
+
+Dentro da pasta abra o vscode.
+
+Digite no terminal do vscode: claude
+
+### 2. Para anexar arquivos:
+
+```bash
+# ANTES de iniciar o CLI
+claude --file "Teste Prático.md"
+
+# OU durante a conversa (arrastar e soltar)
+# Arraste o arquivo para o terminal
+
+# OU pedir para ler arquivo específico
+Leia o conteúdo do arquivo "Teste Prático.md"
+```
+
+### 3. Comandos de prompt eficazes
+
+#### Para Frontend (HTML/CSS/JS)
+
+```
+Analise o desafio e crie:
+1. HTML semântico com estrutura completa
+2. CSS responsivo com design moderno
+3. JavaScript puro com localStorage
+4. Validações de formulário
+5. Comentários explicativos
+```
+
+#### Para Backend (Node.js/Express)
+
+```
+Gere a solução backend:
+1. Estrutura de pastas organizada
+2. Express server com rotas
+3. Middleware de validação
+4. Conexão com banco (MongoDB/PostgreSQL)
+5. Documentação da API
+```
+
+#### Para Fullstack
+
+```
+Crie projeto fullstack completo:
+1. Frontend React/Vue
+2. Backend Node.js/Express
+3. Banco de dados
+4. Docker setup
+5. README com instruções
+```
+
+### 4. Comandos de refinamento
+
+#### Melhorar código existente
+
+```
+Refatore o código aplicando:
+- Clean Code principles
+- Design patterns apropriados
+- Tratamento de erros
+- Testes unitários
+```
+
+#### Adicionar funcionalidades
+
+```
+Implemente:
+- Autenticação JWT
+- Upload de arquivos
+- Cache Redis
+- Rate limiting
+```
+
+#### Documentação
+
+```
+Gere:
+- README.md completo
+- Documentação da API (Swagger)
+- Comentários JSDoc
+- Diagramas de arquitetura
+```
+
+### 5. Sair do CLI
+
+```
+/exit
+```
+
+## 📊 Comparação: Claude CLI vs Gemini CLI
+
+| Funcionalidade           | Claude CLI             | Gemini CLI                   |
+| ------------------------ | ---------------------- | ---------------------------- |
+| **Iniciar chat**         | `claude chat`          | `gemini chat`                |
+| **Anexar arquivo**       | `--file "arquivo.md"`  | `--file "arquivo.md"`        |
+| **Anexar no chat**       | `/attach "arquivo.md"` | `/attach "arquivo.md"`       |
+| **Contexto persistente** | Manual (sem init)      | `gemini init` gera GEMINI.md |
+| **Sair do chat**         | `/exit`                | `/exit`                      |
+| **Comandos internos**    | `/help`, `/clear`      | `/help`, `/clear`            |
+
+## 💡 Dicas Avançadas
+
+### Prompt Templates Otimizados
+
+#### Para Análise de Requisitos
+
+```
+Analise o arquivo anexado e identifique:
+1. Requisitos funcionais
+2. Requisitos não-funcionais
+3. Stack tecnológica sugerida
+4. Cronograma estimado
+5. Possíveis desafios técnicos
+```
+
+#### Para Arquitetura
+
+```
+Com base no desafio, proponha:
+1. Arquitetura da aplicação
+2. Diagramas de fluxo
+3. Estrutura de banco de dados
+4. APIs necessárias
+5. Padrões de segurança
+```
+
+#### Para Deploy
+
+```
+Configure o ambiente de produção:
+1. Dockerfile otimizado
+2. Docker-compose.yml
+3. CI/CD pipeline (GitHub Actions)
+4. Variáveis de ambiente
+5. Scripts de deploy
+```
+
+### Comandos de Iteração Rápida
+
+```bash
+# Análise inicial
+claude chat -f "desafio.md" --prompt "Analise os requisitos e sugira stack"
+
+# Geração de código
+claude chat -f "desafio.md" --prompt "Gere MVP funcional"
+
+# Refinamento
+claude chat --prompt "Adicione testes e documentação ao código anterior"
+```
+
+## 🔧 Troubleshooting
+
+### Arquivo não encontrado
+
+```bash
+# Verifique o caminho
+ls -la *.md
+
+# Use caminho absoluto se necessário
+claude chat --file "/caminho/completo/Teste Prático.md"
+```
+
+### Contexto muito grande
+
+```bash
+# Divida em partes menores
+claude chat -f "parte1.md" --prompt "Analise apenas a seção X"
+```
+
+### Melhor performance
+
+```bash
+# Use prompts específicos
+claude chat -f "desafio.md" --prompt "Foque apenas no backend da API"
+```
+
+## 📁 Estrutura de Projeto Recomendada
+
+```
+projeto/
+├── docs/
+│   ├── desafio.md
+│   ├── requisitos.md
+│   └── arquitetura.md
+├── src/
+│   ├── frontend/
+│   ├── backend/
+│   └── database/
+├── tests/
+├── docker/
+└── README.md
+```
+
+## ⚡ Comandos Rápidos
+
+```bash
+# Análise completa
+claude chat -f "desafio.md" -p "Análise + solução + testes"
+
+# Só frontend
+claude chat -f "desafio.md" -p "Apenas interface HTML/CSS/JS"
+
+# Só backend
+claude chat -f "desafio.md" -p "Apenas API REST Node.js"
+
+# Deploy ready
+claude chat -f "desafio.md" -p "Código + Docker + CI/CD"
+```
