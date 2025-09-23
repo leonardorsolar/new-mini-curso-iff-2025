@@ -244,3 +244,130 @@ function somar(a, b) {
 2. Pedir que o Copilot gere um teste unitário para essa função
 3. Refatorar um componente React usando Copilot
 4. Implementar uma nova feature sugerida pelo Copilot e rodar o projeto
+
+Perfeito 🚀
+Vou montar um **template Markdown reutilizável**, já na ordem do fluxo que você pediu (PRD → TDD → Plano de Projeto → Plano de Testes → Release), **com os comandos de IA acoplados em cada etapa**.
+
+---
+
+# 🛠️ Workflow Completo com IA para Desafio Técnico
+
+## 1. **PRD → Visão de Produto**
+
+📌 Definir **o que deve ser feito**.
+
+- Prompt:
+
+  > “#Teste Prático.md. Copilot, gere um resumo de PRD (visão do produto e funcionalidades principais) baseado no arquivo `.”
+
+🔹 Objetivos + Comandos
+
+- Entender requisitos → **Explain / Comment**
+
+---
+
+## 2. **Especificação Técnica**
+
+📌 Traduzir requisitos em **como implementar**.
+
+- Prompt:
+
+  > “Copilot, crie a Especificação Técnica do projeto.”
+
+🔹 Objetivos + Comandos
+
+- Entender arquitetura → **Explain**
+- Criar esqueleto inicial → **Generate**
+- Criar exemplos de código inicial → **Generate / Docstring**
+- Melhorar estrutura → **Review / Refactor**
+
+---
+
+## 3. **Plano de Projeto → Quando e Quem Faz**
+
+📌 Dividir em **tarefas e responsáveis**.
+
+- Prompt:
+
+  > “Copilot, distribua as features em tarefas técnicas (`/tasks`) e sugira ordem de implementação.”
+
+🔹 Objetivos + Comandos
+
+- Criar backlog de tarefas → **Generate**
+- Melhorar planejamento → **Review**
+
+---
+
+## 4. Desenvolvimento
+
+Escreve só o começo da função/componente → Copilot completa.
+
+Se ficar confuso, usar:
+
+“Explain este trecho de código.” (Aprender)
+“Refactor para melhorar legibilidade e seguir boas práticas.” (Melhorar)
+
+## 5. \*\*Plano de Testes → Como Validar
+
+📌 Criar testes para garantir qualidade.
+
+- Prompt:
+
+  > “Copilot, gere testes unitários e de integração para a feature X.”
+
+🔹 Objetivos + Comandos
+
+- Criar testes → **Generate / Test**
+- Corrigir falhas → **Fix**
+- Melhorar cenários de teste → **Refactor**
+
+Prompt:
+
+“Copilot, gere testes unitários para este módulo e salve em /tests.”
+
+Se o teste falhar:
+
+Colar erro → “Fix este erro passo a passo.”
+
+---
+
+## 6. **Revisão de Código**
+
+Comando:
+
+“@coderrabbit review”
+(Revisão automática do PR ou branch)
+
+---
+
+## 7. **(Opcional) Documentação de Release**
+
+📌 Explicar **quando entregar e o que mudou**.
+
+- Prompt:
+
+  > “Copilot, gere um changelog/release notes baseado nos commits e alterações do projeto.”
+
+🔹 Objetivos + Comandos
+
+- Criar changelog → **Generate**
+- Melhorar clareza → **Refactor / Comment**
+
+Prompt:
+
+“Generate documentação em /docs para a feature X em formato markdown.”
+
+Ou inline:
+
+“Docstring para esta função.”
+
+---
+
+# 📌 Tabela de Atalhos de Comandos
+
+| Objetivo        | Comando Copilot / IA            |
+| --------------- | ------------------------------- |
+| Entender código | **Explain / Comment**           |
+| Melhorar código | **Review / Refactor**           |
+| Corrigir erro   | **Fix**                         |
+| Criar algo novo | **Generate / Test / Docstring** |
