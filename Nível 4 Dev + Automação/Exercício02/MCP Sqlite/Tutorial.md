@@ -16,7 +16,7 @@ MCP:
 6.Adicione o código do mcp no cursor (item 2)
 7- Digite "Cursor IDE" na barra de busca do Google
 8- Abra http://localhost:3001/ e tire um screenshot
-9- registro o name Pedro no formulario http://127.0.0.1:5500/sqlite-mcp/index.html
+9- registro o name Pedro no formulario http://127.0.0.1:5500/index.html
 10-Mostre todos os registros da tabela users
 
 ---

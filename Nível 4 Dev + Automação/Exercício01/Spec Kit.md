@@ -522,3 +522,269 @@ Claro, ainda precisa de devs experientes para validar e refinar — mas o potenc
 ---
 
 https://www.tabnews.com.br/n0n3br/spec-kit-desenvolvimento-de-software-orientado-por-especificacoes-sdd-com-ia
+
+## 🚀 Como usar na prática
+
+1. **Ir para a pasta do projeto**
+
+   ```bash
+   cd app
+   ```
+
+   (ou a pasta onde está seu código).
+
+2. **Abrir a IDE (Cursor, VSCode com extensão, ou Bolt.new)**
+   O AI Agent vai estar disponível no painel lateral.
+
+3. **Digitar os comandos com `/` dentro do chat do agente**.
+   Exemplos:
+
+   - **Definir princípios do projeto**
+
+     ```
+     /constitution
+     ```
+
+     👉 Ele cria as regras do projeto (ex: boas práticas, padrões de código, estilo de arquitetura).
+
+   - **Especificar o que você quer construir**
+
+     ```
+     /specify Quero uma API REST para cadastro de usuários com Node.js e Express.
+     ```
+
+     👉 Ele transforma sua ideia em uma especificação.
+
+   - **Refinar e reduzir riscos**
+
+     ```
+     /clarify
+     ```
+
+     👉 A IA vai levantar dúvidas, pontos obscuros ou riscos antes de planejar.
+
+   - **Gerar um plano de implementação**
+
+     ```
+     /plan
+     ```
+
+     👉 Ele cria um roadmap de alto nível.
+
+   - **Quebrar em tarefas acionáveis**
+
+     ```
+     /tasks
+     ```
+
+     👉 Ele gera tarefas que podem ser copiadas para um Kanban ou rodar em paralelo.
+
+   - **Analisar consistência**
+
+     ```
+     /analyze
+     ```
+
+     👉 Verifica se as specs, plano e tarefas estão alinhados.
+
+   - **Executar implementação**
+
+     ```
+     /implement
+     ```
+
+     👉 Começa a sugerir ou até criar os arquivos de código conforme o plano.
+
+---
+
+## 📌 Exemplo de fluxo completo
+
+```text
+/specify Quero um sistema de login com autenticação JWT em Node.js.
+/clarify
+/plan
+/tasks
+/implement
+```
+
+Perfeito! Vamos montar um **mini tutorial prático** usando esses slash commands para criar um projeto **TODO List** com Node.js e Express. Vou simular o fluxo completo do início ao fim.
+
+---
+
+## 1️⃣ Entrar na pasta do projeto
+
+```bash
+mkdir todo-app
+cd todo-app
+```
+
+> Aqui você já está no diretório do projeto. Se quiser, pode abrir no VSCode ou Cursor IDE para usar o AI Agent.
+
+---
+
+## 2️⃣ Estabelecer os princípios do projeto
+
+No chat do AI Agent, digite:
+
+```
+/constitution
+```
+
+> A IA vai gerar algo como:
+>
+> - Código limpo e modular
+> - Uso de Express + SQLite
+> - Testes unitários obrigatórios
+> - Padronização de rotas e nomes de arquivos
+
+---
+
+## 3️⃣ Criar a especificação do projeto
+
+```
+/specify Criar uma API REST para TODO List com:
+- CRUD de tarefas (criar, listar, atualizar, excluir)
+- Cada tarefa tem: id, título, descrição, status (pendente/concluída)
+- Persistência em SQLite
+- Retorno em JSON
+```
+
+> Resultado esperado: a IA transforma isso em um documento de especificações com endpoints e modelos de dados.
+
+---
+
+## 4️⃣ Clarificar e reduzir riscos
+
+```
+/clarify
+```
+
+> A IA pode levantar:
+>
+> - Validar se precisamos de autenticação
+> - Verificar se todas as operações CRUD estão cobertas
+> - Confirmar o formato de data e status das tarefas
+
+---
+
+## 5️⃣ Criar o plano de implementação
+
+```
+/plan
+```
+
+> A IA gera algo assim:
+>
+> 1. Inicializar projeto Node.js (`npm init -y`)
+> 2. Instalar dependências (`express`, `better-sqlite3`, `cors`, etc.)
+> 3. Criar arquivo principal `index.js`
+> 4. Criar módulo de rotas `routes/todos.js`
+> 5. Criar módulo de persistência `db.js`
+> 6. Criar endpoints CRUD
+> 7. Testes básicos
+
+---
+
+## 6️⃣ Gerar tarefas acionáveis
+
+```
+/tasks
+```
+
+> Resultado esperado (cada item é uma task):
+>
+> - [ ] Criar `package.json` com dependências
+> - [ ] Configurar `express` e servidor básico
+> - [ ] Configurar SQLite e criar tabela `todos`
+> - [ ] Criar endpoint POST `/todos`
+> - [ ] Criar endpoint GET `/todos`
+> - [ ] Criar endpoint PUT `/todos/:id`
+> - [ ] Criar endpoint DELETE `/todos/:id`
+> - [ ] Testar API com Postman ou Insomnia
+
+> Essas tarefas podem ir direto para o seu **Kanban**.
+
+---
+
+## 7️⃣ Analisar consistência
+
+```
+/analyze
+```
+
+> A IA verifica se:
+>
+> - Todas as rotas têm suporte CRUD
+> - A persistência está coerente
+> - Nenhuma tarefa foi esquecida
+
+---
+
+## 8️⃣ Executar implementação
+
+```
+/implement
+```
+
+> A IA começa a sugerir ou até gerar:
+
+```javascript
+// index.js
+const express = require("express");
+const cors = require("cors");
+const todosRoutes = require("./routes/todos");
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+app.use("/todos", todosRoutes);
+
+app.listen(3000, () => console.log("Server running on port 3000"));
+```
+
+```javascript
+// routes/todos.js
+const express = require("express");
+const router = express.Router();
+const db = require("../db");
+
+// POST /todos
+router.post("/", (req, res) => {
+  const { title, description } = req.body;
+  const stmt = db.prepare("INSERT INTO todos (title, description, status) VALUES (?, ?, ?)");
+  const info = stmt.run(title, description, "pendente");
+  res.json({ id: info.lastInsertRowid, title, description, status: "pendente" });
+});
+
+// GET /todos
+router.get("/", (req, res) => {
+  const stmt = db.prepare("SELECT * FROM todos");
+  const todos = stmt.all();
+  res.json(todos);
+});
+
+module.exports = router;
+```
+
+```javascript
+// db.js
+const Database = require("better-sqlite3");
+const db = new Database("todos.db");
+
+db.prepare(
+  `
+CREATE TABLE IF NOT EXISTS todos (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  description TEXT,
+  status TEXT
+)`
+).run();
+
+module.exports = db;
+```
+
+---
+
+💡 **Pronto!** Você tem o **esqueleto funcional de um TODO List** criado com a ajuda do AI Agent usando os slash commands.
