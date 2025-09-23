@@ -188,7 +188,7 @@ Localização apropriada - dentro do seu Documents
 
 Enter
 
-Tutorial da aula:
+# Tutorial da aula: Aula\*
 
 ## 🚀 Passo a Passo
 
@@ -286,7 +286,7 @@ Crie um arquivo "PLANO.md" na pasta atual com o seguinte conteúdo:
 
 Perfeito! 🎉 Agora que o plano está salvo, vamos para os **próximos passos** de implementação:
 
-## 🚀 Próximos Passos no Claude CLI
+## 🚀 Próximos Passos no Claude CLI Aula
 
 ### **1. Sair do Plan Mode**
 
@@ -405,6 +405,7 @@ Crie projeto fullstack completo:
 ### Arquivo CLAUDE.md
 
 O claude adiciona regras e memorias que o usuário deseja que ele siga as instruções
+Lê todos os arquivos e saberá o quem no projeto.
 
 para projeto vazio ou com conteúdo:
 

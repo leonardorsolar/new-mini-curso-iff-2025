@@ -35,4 +35,3 @@ Para começar, me diga:
 2. **Tipo de desenvolvimento:** 🔧 Backend | 🎨 Frontend | 🔄 Full Stack
 3. **Objetivo principal?**
 4. **Prazo disponível (dias/semanas)?**
-

@@ -283,13 +283,7 @@ gemini chat
 Carregue o enunciado para o contexto da IA:
 
 ```bash
-/file "Teste Prático.md"
-```
-
-Você pode confirmar se foi carregado:
-
-```bash
-/files
+@ "Teste Prático.md"
 ```
 
 ---

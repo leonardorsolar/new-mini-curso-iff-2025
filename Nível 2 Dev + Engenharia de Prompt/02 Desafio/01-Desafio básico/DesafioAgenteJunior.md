@@ -1,4 +1,4 @@
-# 📝 Teste Prático – Mini Gestão de Tarefas (HTML, CSS e JS)
+# 📝 Teste Prático – Mini Gestão de Tarefas (HTML, CSS e JS) Aula\*
 
 ## 🎯 Cenário
 
@@ -15,32 +15,34 @@ A persistência pode ser feita em **localStorage** do navegador.
 2. **Listar tarefas existentes** em tela.
 3. **Filtrar tarefas por status:**
 
-   * Pendente
-   * Em andamento
-   * Concluída
+   - Pendente
+   - Em andamento
+   - Concluída
+
 4. **Alterar o status de uma tarefa** (ex.: de pendente para concluída).
 5. **Excluir tarefas** da lista.
 
 ### Regras
 
-* A interface deve ser simples, clara e responsiva.
-* As tarefas devem permanecer salvas ao atualizar a página (usar `localStorage`).
-* O código deve estar organizado e comentado.
+- A interface deve ser simples, clara e responsiva.
+- As tarefas devem permanecer salvas ao atualizar a página (usar `localStorage`).
+- O código deve estar organizado e comentado.
 
 ---
 
 ## 📂 Entrega
 
-* Um único arquivo ou pequena estrutura de pastas contendo:
+- Um único arquivo ou pequena estrutura de pastas contendo:
 
-  * `index.html`
-  * `style.css`
-  * `script.js`
-* Documentação breve (`README.md`) explicando:
+  - `index.html`
+  - `style.css`
+  - `script.js`
 
-  * Decisões técnicas.
-  * Como rodar o projeto (abrir no navegador).
-  * Possíveis melhorias futuras.
+- Documentação breve (`README.md`) explicando:
+
+  - Decisões técnicas.
+  - Como rodar o projeto (abrir no navegador).
+  - Possíveis melhorias futuras.
 
 ---
 
@@ -51,4 +53,3 @@ A persistência pode ser feita em **localStorage** do navegador.
 3. **Usabilidade e responsividade**.
 4. **Clareza da documentação**.
 5. **Uso adequado do localStorage**.
-

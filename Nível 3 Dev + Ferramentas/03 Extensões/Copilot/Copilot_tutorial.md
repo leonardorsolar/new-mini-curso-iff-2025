@@ -253,7 +253,7 @@ Perfeito 👌 vou montar o **tutorial didático** já aproveitando o seu código
 
 ---
 
-# 🚀 Guia Rápido – Usando Instruções no Copilot (VS Code) Aula
+# 🚀 Guia Rápido – Usando Instruções no Copilot (VS Code) Aula\*
 
 ## 🔹 Inline (escrevendo código)
 
@@ -345,6 +345,9 @@ Você pode dar mais **contexto** nas instruções:
 
 - `@vscode` → dicas de uso do VS Code.
 - `@workspace` → Copilot olha o projeto todo.
+  EX.: @workspace create a high-level project overview for this repo
+  (Ele gera uma especificação parecida com a do Claude CLI.)
+  @workspace cria uma visão geral do projeto de alto nível para este projeto
 - `#file:index.js` → referência direta ao arquivo principal da API.
 - `#linha 50-80` → foca em trechos específicos do código.
 

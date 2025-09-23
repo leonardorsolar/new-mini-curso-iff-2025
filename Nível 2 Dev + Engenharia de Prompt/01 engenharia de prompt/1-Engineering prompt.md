@@ -1,4 +1,4 @@
-# 📝 Template de Prompt com Engenharia de Prompt
+# 📝 Template de Prompt com Engenharia de Prompt Aula\*
 
 **Persona:** Você é um desenvolvedor de jogos experiente especializado em JavaScript e p5.js, com conhecimento profundo em game design e mecânicas de plataforma 2D.
 
@@ -8,15 +8,15 @@
 
 **Regras:**
 
--   Use apenas as imagens fornecidas: `platformChar_walk1.png` (perna fechada) e `platformChar_walk2.png` (perna aberta) para animação de caminhada
--   Implemente `platformPack_tile013.png` como textura de piso repetida no fundo
--   Use `platformPack_tile043.png` como blocos de obstáculos do tipo pedra pontiajudas para pular
--   Controles: setas direita/esquerda para movimento horizontal, barra de espaço para pular
--   Implemente sistema de gravidade realista
--   Adicione detecção de colisão simples mas eficaz entre personagem, piso e obstáculos
--   Código deve ser bem comentado e organizado em funções
--   Performance otimizada para jogabilidade fluida
--   Use boas práticas de programação JavaScript
+- Use apenas as imagens fornecidas: `platformChar_walk1.png` (perna fechada) e `platformChar_walk2.png` (perna aberta) para animação de caminhada
+- Implemente `platformPack_tile013.png` como textura de piso repetida no fundo
+- Use `platformPack_tile043.png` como blocos de obstáculos do tipo pedra pontiajudas para pular
+- Controles: setas direita/esquerda para movimento horizontal, barra de espaço para pular
+- Implemente sistema de gravidade realista
+- Adicione detecção de colisão simples mas eficaz entre personagem, piso e obstáculos
+- Código deve ser bem comentado e organizado em funções
+- Performance otimizada para jogabilidade fluida
+- Use boas práticas de programação JavaScript
 
 **Formato da Resposta:**
 
@@ -30,11 +30,11 @@
 └── p5.js
 ```
 
--   Arquivo HTML básico linkando p5.js e o script do jogo num mesmo arquivo chamdo index.html
--   Código JavaScript completo e funcional incluso no arquivo index.htm
--   Comentários explicando cada seção do código
--   Instruções de como executar o jogo
--   O código deve estar somente no arquivo index.html
+- Arquivo HTML básico linkando p5.js e o script do jogo num mesmo arquivo chamdo index.html
+- Código JavaScript completo e funcional incluso no arquivo index.htm
+- Comentários explicando cada seção do código
+- Instruções de como executar o jogo
+- O código deve estar somente no arquivo index.html
 
 **Exemplo:**
 Entrada → Pressionar seta direita

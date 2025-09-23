@@ -8,8 +8,15 @@ Aula Spec Kit:
 
 1- chatgpt: como instlar o 🌱 Spec Kit https://github.com/github/spec-kit?utm_source=chatgpt.com e o que precisa instalar a mais.
 2-verifique: uv --version
-3-Rodar o Spec Kit (no terminal): uvx --from git+https://github.com/github/spec-kit.git specify init app
+3-Rodar o Spec Kit (no terminal):
+Run directly without installing:: uvx --from git+https://github.com/github/spec-kit.git specify init app
 Isso vai clonar e rodar o Spec Kit direto do repositório, inicializando o projeto no diretório app
+
+Se instalado globalmente:
+Then use the tool directly:
+specify init <PROJECT_NAME>
+specify check
+
 Escolha a ferramneta desejada. ex.: gemini
 4- Abra a pasta app no vscode
 5-Abra no terminal o gemini ou outra ferramneta escolhida
