@@ -245,10 +245,139 @@ function somar(a, b) {
 3. Refatorar um componente React usando Copilot
 4. Implementar uma nova feature sugerida pelo Copilot e rodar o projeto
 
-Perfeito 🚀
-Vou montar um **template Markdown reutilizável**, já na ordem do fluxo que você pediu (PRD → TDD → Plano de Projeto → Plano de Testes → Release), **com os comandos de IA acoplados em cada etapa**.
+Entendi 👍 você quer algo **objetivo** e prático, estilo guia rápido. Aqui vai:
 
 ---
+
+Perfeito 👌 vou montar o **tutorial didático** já aproveitando o seu código de API com Express + SQLite para mostrar os exemplos na prática.
+
+---
+
+# 🚀 Guia Rápido – Usando Instruções no Copilot (VS Code) Aula
+
+## 🔹 Inline (escrevendo código)
+
+Enquanto você digita, o **Copilot sugere automaticamente**.
+Exemplo dentro do seu projeto:
+
+```javascript
+// Criar rota que retorna a versão da API
+```
+
+👉 O Copilot completa algo como:
+
+```javascript
+app.get("/version", (req, res) => {
+  res.json({ version: "1.0.0" });
+});
+```
+
+**Atalhos úteis**
+
+- **`Enter + Tab`** → aceita a sugestão.
+- **`Ctrl + Enter`** → abre lista de sugestões diferentes.
+
+---
+
+## 🔹 Modo Chat (Ctrl + I)
+
+No **Copilot Chat**, você pode conversar em **linguagem natural** ou usar **comandos prontos**.
+
+### Exemplos no seu código:
+
+- `"Explique a função que lista usuários"`
+- `"Adicione validação para evitar nomes duplicados no POST /users"`
+
+---
+
+### **Comandos (slash commands)**
+
+São atalhos rápidos:
+
+- `/fix` → Corrigir o código selecionado.
+- `/test` → Gerar testes para o código selecionado.
+- `/doc` → Criar documentação (comentários, docstrings).
+- `/explain` → Explicar o código selecionado.
+- `/optimize` → Melhorar a performance.
+
+👉 Exemplos práticos com o seu código:
+
+```
+@workspace /explain #file:index.js
+```
+
+_(O Copilot explica todo o `index.js`, incluindo as rotas da API.)_
+
+```
+/fix #file:index.js
+```
+
+_(O Copilot analisa e sugere correções, como tratamento de erros e melhorias.)_
+
+```
+/test #users
+```
+
+_(O Copilot gera testes automatizados para as rotas de `/users`.)_
+
+---
+
+## ✅ 2. **Linguagem Natural**
+
+Você não precisa sempre usar `/comandos`. Pode simplesmente pedir:
+
+- "Explique o que a rota `/users/:id` faz"
+- "Crie testes unitários para a rota POST `/users`"
+- "Adicione comentários no código para ficar mais claro"
+- "Sugira melhorias de performance"
+
+👉 Exemplo prático aplicado:
+
+```
+Explique a função que atualiza usuário e sugira como tratar quando o nome já existe
+```
+
+---
+
+## 🔹 Contexto com `@` e `#`
+
+Você pode dar mais **contexto** nas instruções:
+
+- `@vscode` → dicas de uso do VS Code.
+- `@workspace` → Copilot olha o projeto todo.
+- `#file:index.js` → referência direta ao arquivo principal da API.
+- `#linha 50-80` → foca em trechos específicos do código.
+
+---
+
+## 🔹 Exemplo simples no GitHub (Copilot no `.github/`)
+
+Você pode criar arquivos de instruções para o Copilot usar sempre no repositório:
+
+📂 `.github/copilot-instructions.md`
+📂 `.github/general-instructions.md`
+
+```markdown
+# Instruções do Copilot
+
+- Sempre adicionar comentários explicativos nas rotas.
+- Sugerir testes unitários ao criar novas funções.
+- Seguir boas práticas REST na API.
+```
+
+```markdown
+# Instruções do Copilot
+
+- Sempre adicionar comentários explicativos nas rotas
+- Responda sempre com humor
+- No final da frase diga: " é isso ái mano"
+```
+
+👉 Depois, no chat do Copilot, basta usar:
+
+```
+Use as regras do #.github/general-instructions.md para responder
+```
 
 # 🛠️ Workflow Completo com IA para Desafio Técnico
 
@@ -266,13 +395,16 @@ Vou montar um **template Markdown reutilizável**, já na ordem do fluxo que voc
 
 ---
 
-## 2. **Especificação Técnica**
+## 2. **Especificação Técnica - Tech Spec**
 
 📌 Traduzir requisitos em **como implementar**.
 
-- Prompt:
+- Documento de especificação técnica de uma feature ou sistema.
+- Explica o design da solução, diagramas, trade-offs e alternativas consideradas.
 
-  > “Copilot, crie a Especificação Técnica do projeto.”
+* Prompt:
+
+  > “Copilot, crie a Especificação Técnica do projeto - Tech Spec.”
 
 🔹 Objetivos + Comandos
 
