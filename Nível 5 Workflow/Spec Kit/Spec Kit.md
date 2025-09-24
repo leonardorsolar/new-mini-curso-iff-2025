@@ -2,7 +2,9 @@
 
 O Spec Kit é um toolkit open-source que propõe uma nova abordagem chamada Spec-Driven Development - basicamente, você especifica o que quer e a IA constrói pra você.
 
-## https://github.com/github/spec-kit?utm_source=chatgpt.com
+https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
+
+https://github.com/github/spec-kit
 
 Aula Spec Kit:
 
